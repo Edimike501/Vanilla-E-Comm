@@ -1,0 +1,213 @@
+.product-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 0;
+  background-color: var(--onbg);
+}
+
+.product-cont-sub {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 26px;
+}
+
+.product-cont .product {
+  height: 350px;
+  background-color: #fff;
+  position: relative;
+  z-index: 0;
+  color: #000;
+  transition: 0.3s;
+  box-shadow: 1px 1px 5px 1px #ccc;
+  cursor: pointer;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.product-cont .product:hover {
+  box-shadow: 1px 1px 5px 1px #aaa;
+}
+
+.product-cont .product .percent {
+  /* height: 100%; */
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+}
+
+.product-cont .product .percent p {
+  background-color: #c81f5a;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  border: 10px solid var(--onbg);
+  position: absolute;
+}
+
+.product-cont .product .image {
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: #fff; */
+  /* object-fit: contain;*/
+}
+
+.product-cont .product .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* height: 400px; */
+  /* transform: rotate(35deg); */
+  transition: all 0.3s;
+}
+
+.product-cont .product > .image:hover img {
+  transform: scale(106%);
+  cursor: pointer;
+}
+
+.product-cont .product .det {
+  width: 100%;
+  height: 35%;
+  /* background-color: #aaa; */
+  color: #fff;
+  padding: 16px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-cont .product .det p.name {
+  font-size: 13px;
+  /* padding: 10px 0; */
+  text-transform: uppercase;
+  color: #212121;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.product-cont .product .det .brnd-cont {
+  font-size: 12px;
+  /* padding-top: 2px 0; */
+}
+
+.product-cont .product .det .brnd-cont .brand {
+  color: #464646;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.product-cont .product .det .brnd-cont .price {
+  color: #c81f5a;
+  font-weight: bold;
+  margin: 0;
+  /* padding-right: 1rem; */
+}
+
+.product-cont .product .det .rating {
+  margin: 13px 0;
+  /* padding: 2px 0; */
+}
+.product-cont .product .det .rating i {
+  margin: 0 0.05rem;
+  font-size: 13px;
+  color: #aaa;
+}
+.product-cont .product .det .rating i:nth-child(1),
+.product-cont .product .det .rating i:nth-child(2),
+.product-cont .product .det .rating i:nth-child(3) {
+  color: #c81f5a;
+}
+
+.product-cont .product .det .btn {
+  /* padding-top: 1.2rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  /* margin: auto 0; */
+  /* margin-right: 30px; */
+  color: #111;
+  font-size: 12px;
+}
+
+.product-cont .product .det .btn :hover {
+  cursor: pointer;
+  color: #c81f5a;
+}
+
+.product-cont .product .det .btn a {
+  text-decoration: none;
+}
+
+.product-cont .product .det .btn div {
+  color: #c81f5a;
+  font-weight: 600;
+}
+
+.product-cont .product .det .btn button {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #c81f5a;
+  background-color: #3330;
+  color: #c81f5a;
+  text-transform: uppercase;
+  font-size: 9px;
+  transition: 0.3s;
+}
+
+.product-cont .product .det .btn button:hover {
+  background-color: #c81f5a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.product-cont > button {
+  padding: 15px 45px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  /* border-radius: 5px; */
+  background-color: var(--pink);
+  color: var(--white);
+}
+.product-cont > button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 950px) {
+  .product-cont .product .det .btn {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 830px) {
+  .product-cont-sub {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .product-cont-sub {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 15px;
+  }
+
+  .product-cont .product {
+    box-shadow: 1px 2px 3px 1px #aaa;
+  }
+}
